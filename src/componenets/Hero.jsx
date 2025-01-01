@@ -9,11 +9,9 @@ import { SideLines } from './design/Header'
 
 const Hero = () => {
     return (
-        <Section id='hero'
-            className="pt-[12rem] -mt-[5rem]"
-            crosses
-            // crossesOffset="lg:"
-            customPaddings>
+        <Section id='hero' className="pt-[12rem] md:pt-[19rem] -mt-[5rem]"
+            crosses customPaddings crossesOffset="lg:translate-y-[5.25rem]">
+                
             <div className="container relative">
                 <div className="relative z-1 max-w-[60rem] mx-auto text-center
                     mb-[4rem] lg:px-10">

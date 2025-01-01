@@ -3,18 +3,18 @@ import SectionSvg from '../../assets/svg/SectionSvg'
 
 const Section = ({ className, id, customPaddings, crosses, crossesOffset, children }) => {
     return (
-        <div id={id}
-            className={`relative ${className || ''}
-                ${customPaddings || "py-10"}
-                ${crosses ? "lg:py-30" : ""} `}>
-            {children}
+        <div id={id} className={`z-10 relative ${className || ''}
+            ${customPaddings || "py-10"}
+            ${crosses ? "lg:py-30" : ""} `}>
 
-            <div className="hidden md:block absolute top-0 left-5 
-            w-1 h-full bg-stroke-1 pointer-events-none 
-            "/>
-            <div className="hidden md:block absolute top-0 right-5 
-            w-1 h-full bg-stroke-1 pointer-events-none 
-            "/>
+            {children}
+            {/* Sidelines */}
+            <div className="hidden lg:block absolute top-0 left-5 
+            w-0.5 h-full bg-stroke-1 pointer-events-none"/>
+            <div className="hidden lg:block absolute top-0 right-5 
+            w-0.5 h-full bg-stroke-1 pointer-events-none"/>
+
+            {/*  */}
             {crosses && (
                 <>
                     <div className={`hidden absolute top-0 left-7 right-7 h-1 bg-stroke-1

@@ -3,14 +3,24 @@ import { useLocation } from "react-router-dom"
 import Button from "./Button";
 import { HamburgerMenu, SideLines } from "./design/Header"
 import MenuSvg from "../assets/svg/MenuSvg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const currentPath = useLocation();
   // console.log(currentPath);
   const [showNav, setshowNav] = useState(false);
+  
+  // Disable scroll when Navbar is opened
+  useEffect(() => {
+    if (showNav) {
+      document.body.classList.add("overflow-hidden");
+      return;
+    } 
+    document.body.classList.remove("overflow-hidden");
+  }, [showNav]);
+
   return (
-      <div className={`fixed top-0 left-0 right-0 w-full  
+      <div className={`z-20 fixed top-0 left-0 right-0 w-full  
         backdrop-blur-sm border-b border-n-6 py-4 ${showNav ? "bg-n-8" : "bg-n-7 backdrop-blur-sm"}`}>
 
         <div className="flex justify-between px-10 items-center gap-10">
