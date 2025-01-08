@@ -14,14 +14,14 @@ const Benefits = () => {
                     title="Chat Smarter, Not Harder with Brainwave"
                 />
                 {/* Benefits Cards */}
-                <div className="flex flex-wrap gap-10 mb-10">
+                <div className="relative flex flex-wrap justify-center gap-10 mb-10">
                     {benefits.map(item => (
                         <div key={item.id}
                             className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
                             style={{
                                 backgroundImage: `url(${item.backgroundUrl})`
                             }}>
-                            <div className="flex flex-col min-h-[22rem] p-10 pointer-events-none">
+                            <div className="relative flex flex-col min-h-[22rem] p-10 ">
                                 <h5 className="h5 mb-5">
                                     {item.title}
                                 </h5>
@@ -35,7 +35,22 @@ const Benefits = () => {
                                     <Arrow />
                                 </div>
                             </div>
-                            {item.light && <GradientLight/>}
+                            {/* Background Light effect in some cards */}
+                            {item.light && <GradientLight />}
+
+                            {/* Bg image for card */}
+                            <div className="absolute inset-0 bg-n-8 opacity-0 hover:opacity-10 transition-opacity"
+                                style={{ clipPath: "url(#benefits)" }}>
+                                    {item.imageUrl && (
+                                        <img
+                                          src={item.imageUrl}
+                                          width={380}
+                                          height={362}
+                                          alt={item.title}
+                                          className="w-full h-full object-cover"
+                                        />
+                                    )}
+                            </div>
                         </div>
                     ))}
                 </div>
