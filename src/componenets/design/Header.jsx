@@ -15,12 +15,12 @@ export const Rings = () => {
     );
 };
 
-// Create a div with background, convert div into a line
+// Create a div with background, convert div into a line (Vertically)
 export const SideLines = () => {
     return (
         <>
-            <div className="absolute top-0 left-5 w-[2px] h-[100vh] bg-n-6"></div>
-            <div className="absolute top-0 right-5 w-[2px] h-[100vh] bg-n-6"></div>
+            <div className="absolute top-0 left-5 w-[2px] h-[100vh] bg-stroke-1"></div>
+            <div className="absolute top-0 right-5 w-[2px] h-[100vh] bg-stroke-1"></div>
         </>
     );
 };
@@ -29,24 +29,26 @@ export const SideLines = () => {
 export const BackgroundCircles = () => {
     return (
         <>
-            <div className="absolute top-[4.4rem] left-16 w-4 h-4 
+            <div className="absolute md:hidden top-[9rem] left-16 w-4 h-4 
                  bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full"></div>
-            <div className="absolute top-[12.6rem] right-16 w-4 h-4 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full"></div>
-            <div className="absolute top-[24rem] left-12 w-6 h-6 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full"></div>
+            <div className="absolute md:hidden top-[10rem] right-16 w-4 h-4 
+                 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full"></div>
+            <div className="absolute md:hidden top-[30rem] left-12 w-6 h-6 
+                 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full"></div>
         </>
     );
 };
 
 export const HamburgerMenu = () => {
     return (
-        <div className="absolute inset-0 pointer-events-none lg:hidden">
-            <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute md:hidden inset-0 pointer-events-none lg:hidden">
+            <div className="absolute md:hidden inset-0 opacity-[0.03]">
                 <img className="w-full h-full object-cover" alt="Background"
                     src={background} width={688} height={953} />
             </div>
             <Rings />
             <SideLines />
-            <BackgroundCircles />
+            {/* <BackgroundCircles /> */}
         </div>
     );
 };

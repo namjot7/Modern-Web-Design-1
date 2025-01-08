@@ -10,6 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Text color
         color: {
           1: "#AC6AFF",
           2: "#FFC876",
@@ -18,9 +19,11 @@ export default {
           5: "#858DFF",
           6: "#FF98E2",
         },
+        // background or borders
         stroke: {
           1: "#26242C",
         },
+        // Color palette: For all (Bg, text, border etc.)
         n: {
           1: "#FFFFFF",
           2: "#CAC6DD",
@@ -81,7 +84,7 @@ export default {
     plugin(function ({ addBase, addComponents, addUtilities }) {
       addBase({}); // empty here: styles that apply globally
 
-      // Adds reusable component classe
+      // Reusable component classes
       addComponents({
         ".container": {
           "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
