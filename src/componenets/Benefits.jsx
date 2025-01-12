@@ -41,15 +41,12 @@ const Benefits = () => {
                             {/* Bg image for card */}
                             <div className="absolute inset-0 bg-n-8 opacity-0 hover:opacity-10 transition-opacity"
                                 style={{ clipPath: "url(#benefits)" }}>
-                                    {item.imageUrl && (
-                                        <img
-                                          src={item.imageUrl}
-                                          width={380}
-                                          height={362}
-                                          alt={item.title}
-                                          className="w-full h-full object-cover"
-                                        />
-                                    )}
+                                {item.imageUrl && (
+                                    <img src={item.imageUrl} alt={item.title}
+                                        width={380} height={362}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
                             </div>
                         </div>
                     ))}

@@ -16,10 +16,16 @@
 * {
   scroll-behavior: smooth;
 }
+
 body {
   padding: 20px;
   overflow-x: hidden;
 }
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
 /* @layer base {
     body {
         @apply font-sans bg-n-8 text-n-1 text-base;
