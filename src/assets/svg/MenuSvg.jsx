@@ -1,3 +1,5 @@
+
+// Rotate the tow lines to make a "cross X" icon 
 const MenuSvg = ({ showNav }) => {
   return (
     <svg

@@ -4,7 +4,6 @@ import { curve, heroBackground, robot } from '../assets'
 import Button from './Button'
 import { ScrollParallax } from 'react-just-parallax'
 import { heroIcons } from '../constants'
-import { SideLines } from './design/Header'
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero"
 import Generating from './Generating'
 import Notification from './Notification'
@@ -44,11 +43,11 @@ const Hero = () => {
                             <div className="h-[1.5rem] bg-n-10 rounded-t-2xl" />
 
                             {/* Image and Icons */}
-                            <div className='aspect-[50/40] md:aspect-[600/300] lg:aspect-[600/280] overflow-hidden rounded-b-2xl'>
+                            <div className=' aspect-[50/40] md:aspect-[600/300] lg:aspect-[600/280] overflow-hidden rounded-b-2xl'>
                                 <img className='-translate-y-[15%] ' src={robot}
                                     width={1000} height={498} alt="" />
 
-                                <Generating className={'z-30 absolute bottom-5 left-4 right-5  md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-[30rem]'} />
+                                <Generating className={'z-1 absolute bottom-5 left-4 right-5  md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-[30rem]'} />
 
                                 <ScrollParallax isAbsolutelyPositioned>
                                     <ul className="hidden absolute bottom-[25%] -left-[10%] lg:flex gap-4 bg-n-9/40 p-1 rounded-2xl border-n-1 backdrop-blur">
@@ -67,7 +66,7 @@ const Hero = () => {
                         <Gradient />
                     </div>
                     {/* Hero background image */}
-                    <div className=" -z-1 absolute -top-[84%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[90%] md:w-[138%]">
+                    <div className="-z-1 absolute -top-[84%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[90%] md:w-[138%]">
                         <img width={1440} height={1800} src={heroBackground} alt="hero background" />
                     </div>
                     <BackgroundCircles parallaxRef={parallexRef} />

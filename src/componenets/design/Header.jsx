@@ -25,8 +25,9 @@ export const SideLines = () => {
     );
 };
 
+// Not used anywhere
 // Div with gradient bg, converted into circles
-export const BackgroundCircles = () => {
+export const BackgroundCirclesMobile = () => {
     return (
         <>
             <div className="absolute md:hidden top-[9rem] left-16 w-4 h-4 
@@ -42,13 +43,12 @@ export const BackgroundCircles = () => {
 export const HamburgerMenu = () => {
     return (
         <div className="absolute md:hidden inset-0 pointer-events-none lg:hidden">
-            <div className="absolute md:hidden inset-0 opacity-[0.03]">
+            <div className="absolute inset-0 opacity-[0.03]">
                 <img className="w-full h-full object-cover" alt="Background"
                     src={background} width={688} height={953} />
             </div>
             <Rings />
             <SideLines />
-            {/* <BackgroundCircles /> */}
         </div>
     );
 };

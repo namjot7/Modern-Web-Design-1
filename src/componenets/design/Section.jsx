@@ -3,7 +3,7 @@ import SectionSvg from '../../assets/svg/SectionSvg'
 
 const Section = ({ className, id, customPaddings, crosses, crossesOffset, children }) => {
     return (
-        <div id={id} className={`z-10 relative 
+        <div id={id} className={`z-5 relative 
             ${className || ''}
             ${customPaddings || "py-10"} 
             ${crosses ? "lg:py-30" : ""} `}>

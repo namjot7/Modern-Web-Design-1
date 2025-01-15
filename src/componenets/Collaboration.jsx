@@ -6,8 +6,7 @@ import Section from "./design/Section";
 
 const Collaboration = () => {
     return (
-        // remove paddings after completing the section
-        <Section crosses customPaddings="py-20">
+        <Section crosses>
             <div className="container lg:flex">
                 {/* Theory */}
                 <div className="max-w-[25rem]">
@@ -58,10 +57,9 @@ const Collaboration = () => {
                                 </li>
                             ))}
                         </ul>
-                        <LeftCurve/>
-                        <RightCurve/>
+                        <LeftCurve />
+                        <RightCurve />
                     </div>
-
                 </div>
             </div>
         </Section>

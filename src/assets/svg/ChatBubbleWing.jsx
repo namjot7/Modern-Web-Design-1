@@ -1,3 +1,4 @@
+// Triangle shape svg
 const ChatBubbleWing = ({ className, pathClassName }) => {
   return (
     <svg

@@ -25,7 +25,7 @@ export const BottomLine = () => {
 };
 
 const Rings = () => {
-	const ringsProps = "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square border border-n-2/10 rounded-full";
+	const ringsProps = "-z-1 block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-square border border-n-2/10 rounded-full";
 	return (
 		<>
 			<div className={"w-[65.875rem] " + ringsProps} />
@@ -41,7 +41,7 @@ export const BackgroundCircles = ({ parallaxRef }) => {
 
 	if (parallaxRef.current) console.log(parallaxRef.current); // parent ref
 
-	const outerDivProps = " xl:absolute bottom-1/2 left-1/2  w-0.25 h-1/2 origin-bottom  ";
+	const outerDivProps = " -z-1 hidden lg:block lg:absolute bottom-1/2 left-1/2  w-0.25 h-1/2 origin-bottom  ";
 	const bgCirclesProps = ` ${mounted ? "translate-y-20 opacity-100" : "translate-y-15 opacity-0"} 
 							duration-500 ease-out rounded-full `;
 
@@ -50,7 +50,7 @@ export const BackgroundCircles = ({ parallaxRef }) => {
 	}, []);
 
 	return (
-		<div className="absolute z-1 -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]">
+		<div className="absolute -z-1 -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]">
 			<Rings />
 
 			{/* Moving background colored circle balls */}
@@ -74,56 +74,7 @@ export const BackgroundCircles = ({ parallaxRef }) => {
 				<div className={outerDivProps + " -rotate-[85deg]"}>
 					<div className={`w-6 h-6 ml-12 -mt-12 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] ${bgCirclesProps}`} />
 				</div>
-			</MouseParallax>
-			}
+			</MouseParallax>}
 		</div >
-		// <div className="absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]">
-		// 	<Rings />
-
-		// 	{/* Moving background colored circle balls */}
-		// 	<MouseParallax strength={0.07} parallaxContainerRef={parallaxRef}>
-		// 		<div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[46deg]">
-		// 			<div
-		// 				className={`w-4 h-4 -ml-1 -mt-36 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-		// 					}`}
-		// 			/>
-		// 		</div>
-
-		// 		<div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[56deg]">
-		// 			<div
-		// 				className={`w-4 h-4 -ml-1 -mt-32 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-		// 					}`}
-		// 			/>
-		// 		</div>
-
-		// 		<div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg]">
-		// 			<div
-		// 				className={`w-4 h-4 -ml-1 mt-[12.9rem] bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block transit transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-		// 					}`}
-		// 			/>
-		// 		</div>
-
-		// 		<div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[65deg]">
-		// 			<div
-		// 				className={`w-4 h-4 -ml-1.5 mt-52 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-		// 					}`}
-		// 			/>
-		// 		</div>
-
-		// 		<div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[85deg]">
-		// 			<div
-		// 				className={`w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-		// 					}`}
-		// 			/>
-		// 		</div>
-
-		// 		<div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[70deg]">
-		// 			<div
-		// 				className={`w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-		// 					}`}
-		// 			/>
-		// 		</div>
-		// 	</MouseParallax>
-		// </div>
 	);
 };
