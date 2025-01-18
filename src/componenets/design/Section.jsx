@@ -6,15 +6,15 @@ const Section = ({ className, id, customPaddings, crosses, crossesOffset, childr
         <div id={id} className={`z-5 relative 
             ${className || ''}
             ${customPaddings || "py-10"} 
-            ${crosses ? "lg:py-30" : ""} `}>
+            ${crosses ? "lg:py-30" : ""}`}>
 
             {children}
 
             {/* Sidelines (Vertically) */}
             <div className="hidden lg:block absolute top-0 left-5 
-            w-0.5 h-full bg-stroke-1 pointer-events-none"/>
+            w-0.25 h-full bg-stroke-1 pointer-events-none"/>
             <div className="hidden lg:block absolute top-0 right-5 
-            w-0.5 h-full bg-stroke-1 pointer-events-none"/>
+            w-0.25 h-full bg-stroke-1 pointer-events-none"/>
 
             {/* Horizontal line */}
             {crosses && (

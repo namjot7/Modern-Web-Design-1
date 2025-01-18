@@ -23,7 +23,7 @@ const Header = () => {
     <div className={`z-10 fixed top-0 left-0 right-0 w-full  
         backdrop-blur-sm border-b border-n-6 py-4 ${showNav ? "bg-n-8" : "bg-n-7 backdrop-blur-sm"}`}>
 
-      <div className="flex justify-between px-10 items-center gap-10">
+      <div className="flex justify-between px-4 items-center gap-10">
         {/* Brainwave logo */}
         <a className="block w-[10rem]" href="#hero">
           <img src="src/assets/brainwave.svg" width={200} alt="" />
